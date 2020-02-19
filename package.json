@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass ./src/sass/main.scss ./src/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenACZ/Portfolio_Dev.git"
+  },
+  "author": "Steven Coaila <scoailazaa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StevenACZ/Portfolio_Dev/issues"
+  },
+  "homepage": "https://github.com/StevenACZ/Portfolio_Dev#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

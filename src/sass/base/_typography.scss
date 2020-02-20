@@ -12,6 +12,7 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
+// TITLE
 .section__title {
   margin-bottom: .25em;
   
@@ -24,6 +25,7 @@ h3 { font-size: var(--fs-h3) }
   }
 }
 
+// SUBTITLE
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);  
@@ -35,4 +37,11 @@ h3 { font-size: var(--fs-h3) }
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
   }
+}
+
+// WORK
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
 }

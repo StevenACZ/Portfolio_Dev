@@ -296,6 +296,7 @@ header {
       position: relative;
       z-index: 2; }
   .section__subtitle--intro {
+    text-transform: uppercase;
     align-self: start;
     grid-column: -1 / 1;
     grid-row: 2;
@@ -386,3 +387,16 @@ header {
   .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5; }
+
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .portfolio-item-individual > p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
+  .portfolio-item-individual > img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }

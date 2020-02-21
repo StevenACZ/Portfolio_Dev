@@ -110,15 +110,15 @@ h3 {
   z-index: 5; }
 
 .curtain-1 {
-  background: #ff1f6b;
+  background: var(--clr-light);
   transition-delay: 0.2s; }
 
 .curtain-2 {
-  background: #219dff;
+  background: var(--clr-accent);
   transition-delay: 0.1s; }
 
 .curtain-3 {
-  background: #111;
+  background: var(--clr-dark);
   transition-delay: 0s;
   opacity: 0; }
 
@@ -163,8 +163,8 @@ h3 {
 
 .toggle__button {
   position: fixed;
-  top: 25px;
-  right: -17px;
+  top: 31px;
+  right: -12px;
   transform: translate(-50%, -50%);
   width: 50px;
   background: transparent;
@@ -237,8 +237,13 @@ header {
   justify-content: space-between;
   padding: 1em; }
 
-.logo {
-  max-width: 130px; }
+.logo a {
+  text-decoration: none; }
+
+.logo__p {
+  margin: 0;
+  font-family: var(--ff-secondary);
+  color: var(--clr-dark); }
 
 .footer {
   background: #111;

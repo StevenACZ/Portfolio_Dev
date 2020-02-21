@@ -8,5 +8,13 @@ header {
 }
 
 .logo {
-  max-width: 130px;
+  a {
+    text-decoration: none;
+  }
+  
+  &__p {
+    margin: 0;
+    font-family: var(--ff-secondary);
+    color: var(--clr-dark);
+  }
 }

@@ -11,10 +11,21 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  & a {
+    color: var(--clr-accent);
+    text-decoration: none;
+  }
   
   & > img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid var(--clr-accent);
+    transition: all .5s;
+
+    &:hover {
+      transform: scale(1.01);
+    }
   }
 }

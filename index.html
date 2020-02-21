@@ -21,19 +21,22 @@
     <div class="logo">
       <img src="./src/img/devjane.png" alt="Logo">
     </div>
-    
-    <button class="nav-toglge" aria-label="toggle navigation">
-      <span class="hamburger"></span>
-    </button>
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">My Services</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">My Work</a></li>
-      </ul>
-    </nav>
+    <input class="toggle__checkbox" type="checkbox" id="navi-toggle">
+    <label class="toggle__button" for="navi-toggle">
+      <div class="toggle__icon"></div>
+    </label>
+
+    <span class="curtain-1"></span>
+    <span class="curtain-2"></span>
+    <span class="curtain-3"></span>
+
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">My Services</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">My Work</a></li>
+    </ul>
   </header>
 
   <!--INTRODUCTION-->
@@ -171,5 +174,10 @@
     </ul>
   </footer>
 
+  <script>
+    function toggle() {
+      let curtain = document.querySelector('.curtain').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

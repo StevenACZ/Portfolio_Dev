@@ -1,0 +1,165 @@
+/////////////////////////////////////////////////////////////
+//--(CURTAIN)---------------------------------------------//
+///////////////////////////////////////////////////////////
+[class^="curtain"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: translateX(-100%);
+  transition: .5s ease-in;
+  z-index: 5;
+}
+
+.curtain-1 {
+  background: #ff1f6b;
+  transition-delay: 0.2s;
+}
+
+.curtain-2 {
+  background: #219dff;
+  transition-delay: 0.1s;
+}
+
+.curtain-3 {
+  background: #111;
+  transition-delay: 0s;
+  opacity: 0;
+}
+
+// NAV LIST
+.nav {
+  &__list {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0s;
+    transform: translate(-50%,-50%);
+    padding: 0;
+  }
+
+    &__item {
+      list-style: none;
+      margin: 10px 0;
+    }
+  
+      &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        padding: 0px 20px;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #16E0BD 50%);
+        background-size: 225%;
+        transition: .5s;
+
+        &:hover,
+        &:active {
+          color: #303030;
+          transform: translateX(1rem);
+          background-position: 100%;
+        }
+      }
+}
+
+.toggle__checkbox:checked ~ .nav__list {
+  visibility: visible;
+  opacity: 1;
+}
+
+// TOGGLE
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__button {
+  position: fixed;
+  top: 25px;
+  right: -17px;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  background: transparent;
+  height: 40px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.toggle__icon {
+  width: 2em;
+  height: 3px;
+  background-color: var(--clr-accent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  transition: all .5s;
+}
+
+.toggle__icon::before,
+.toggle__icon::after {
+  content: '';
+  position: absolute;
+  width: 2em;
+  height: 3px;
+  background-color: var(--clr-accent);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  transition: all .5s;
+}
+
+.toggle__icon::before {
+  top: -6px;
+}
+
+.toggle__icon::after {
+  top: 6px;
+}
+
+.toggle__button:hover .toggle__icon {
+  background: rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.toggle__button:hover .toggle__icon::before {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.toggle__button:hover .toggle__icon::after {
+  top: 0;
+  transform: rotate(135deg);
+  width: 30px;
+}
+
+.toggle__checkbox:checked {
+  background-color: var(--clr-accent);
+}
+
+.toggle__checkbox:checked ~ [class^="curtain"] {
+  transform: translateX(0%);
+}
+
+.toggle__checkbox:checked ~ .curtain-1 {
+  z-index: 10;
+  transition-delay: 0s;
+}
+
+.toggle__checkbox:checked ~ .curtain-2  {
+  z-index: 20;
+  transition-delay: 0.1s;
+}
+
+.toggle__checkbox:checked ~ .curtain-3  {
+  z-index: 30;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
